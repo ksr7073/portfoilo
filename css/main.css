@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+@font-face {
+    font-family: 'Cafe24Ohsquareair';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202@1.0/Cafe24Ohsquareair.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {display: block; text-decoration: none; color: #3333;}
+img {width: 100%;}
+html, body { font-family: 'Cafe24Ohsquareair';}
+div, header, section, footer { box-sizing: border-box;}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 8vw;
+    height: 100vh;
+    background-color: #5fa0ab;
+}
+header .logo {
+    width: 8vw;
+    height: 8vw;
+    padding: 1vw;
+    margin: 1.2vw 0;
+}
+header nav {
+    margin-top: 3vw;
+}
+header nav ul li a {
+    padding: 1.1vw;
+    text-align: center;
+    color: #fff;
+    font-size: 1vw;
+    border-top: 1px solid #fff ;
+}
+header nav ul li:last-child {
+    border-bottom: 1px solid #fff;
+}
+header nav ul li:hover a,
+header nav ul li.active a {
+    color: #5fa0ab;
+    background-color: #fff;
+}
+header .sns {
+    margin-top: 3.3vw;
+}
+header .sns ul li a {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 28px;
+    text-indent: -9999px;
+    height:4vw;
+}    
+header .sns ul li:first-child a {
+    background-image: url(../img/facebook.png);
+}
+header .sns ul li:last-child a {
+    background-image: url(../img/instar.png);
+}
+
+header .search a {
+    position: absolute;    /*브라우저 왼쪽 하단에 위치 고정*/
+    bottom: 0;
+    width: 8vw;
+    height: 6vw;
+    left:50%;
+    transform:translateX(-50%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60px;
+    background-image: url(../img/search.png);
+    text-indent: -9999px;
+    background-color: #fff;
+    border-right: 1px solid #5fa0ab;
+}
+/*section에 배경넣기*/
+.intro {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../img/flower-1.png);
+}
+
+.profile {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../img/bg.jpg);
+}
+
+/*section*/
+
+.section {
+    padding-left: 10vw;
+    overflow: hidden;
+}
+.section h1 {
+    text-align: center;
+    font-family:'Secular One', sans-serif;
+    font-size: 2.4vw;
+    color: #40625b;
+    letter-spacing: 1px;
+    opacity: 0;
+    transition: all 0.5s;
+    transition-delay: 0.3s;
+    margin-bottom: 3vw;
+}
+.section h1.active {
+    opacity: 1;
+}
+.section .box {
+    width: 70%;
+    height: 70%;
+    margin: 0vw auto;
+    position: relative;
+}
+.section .box > div {
+    width: 40%;
+    position: absolute;
+}
+.section .box .photo {
+    width: 35%;
+    top: 0;
+    left: -100vw;
+    transition: all 1s;
+    transition-delay : 0.7s;
+}
+.section .box .photo.active {
+    left: 0;
+}
+.section .box .license {
+    top: 4vw;
+    right: -100vw;
+    transition: all 1s;
+    transition-delay: 0.7s;
+}
+.section .box .license.active {
+    right: 0;
+}
+.section .box .work {
+    margin-top: 2vw; 
+    top: 64%;
+    left: -100vw;
+    transition: all 1s;
+    transition-delay: 0.7s;
+}
+.section .box .work.active {
+    left: 5vw;
+}
+.section .box .skill {
+    top: 40%;
+    right: -100vw;
+    transition: all 1s;
+    transition-delay: 0.7s;
+}
+.section .box .skill.active {
+    right: 0;
+}
+.section .box h2 {
+    font-size: 1.2vw;
+    margin-bottom: 1vw;
+    color: #001710;
+    font-weight: bold;
+}
+.section .box p {
+    font-size: 0.9vw;
+    line-height: 1.6vw;
+    font-weight: bold;
+}
+.section .box p span {
+    color: #001710;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* skillbar */
+.container-skillbar {
+    width:100%;
+    padding-top:30px;
+    height:auto;
+    overflow:none;
+}
+.skillbar {
+    position:relative;
+    display:block;
+    margin-bottom:15px;
+    width:100%;
+    background:#efefef;
+    height:30px;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    -webkit-transition:0.4s linear;
+    -moz-transition:0.4s linear;
+    -ms-transition:0.4s linear;
+    -o-transition:0.4s linear;
+    transition:0.4s linear;
+    -webkit-transition-property:width, background-color;
+    -moz-transition-property:width, background-color;
+    -ms-transition-property:width, background-color;
+    -o-transition-property:width, background-color;
+    transition-property:width, background-color;
+}
+
+.skillbar-title {
+    position:absolute;
+    top:0;
+    left:0;
+    width:110px;
+    font-weight:bold;
+    font-size:13px;
+    color:#fff;
+    background:#6adcfa;
+    -webkit-border-top-left-radius:3px;
+    -webkit-border-bottom-left-radius:4px;
+    -moz-border-radius-topleft:3px;
+    -moz-border-radius-bottomleft:3px;
+    border-top-left-radius:3px;
+    border-bottom-left-radius:3px;
+}
+
+.skillbar-title span {
+    display:block;
+    background:rgba(0, 0, 0, 0.15);
+    padding:0 20px;
+    height:30px;
+    line-height:30px;
+    -webkit-border-top-left-radius:3px;
+    -webkit-border-bottom-left-radius:3px;
+    -moz-border-radius-topleft:3px;
+    -moz-border-radius-bottomleft:3px;
+    border-top-left-radius:3px;
+    border-bottom-left-radius:3px;
+}
+
+.skillbar-bar {
+    height:30px;
+    width:0px;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+}
+
+.skill-bar-percent {
+    position:absolute;
+    right:10px;
+    top:0;
+    font-size:11px;
+    height:30px;
+    line-height:30px;
+    color:#ffffff;
+    color:rgba(0, 0, 0, 0.5);
+}
+/* web */
+.section .box .swiper {
+    width: 100%;
+    position: absolute;
+    top: 100vh;
+    opacity: 0;
+    transition: all 1s;
+    transition-delay: 0.5s;
+}
+.section .box .swiper.active {
+    top: 0;
+    opacity: 1;
+}
+.section .box .swiper .swiper-slide {
+    background-color: #fff;
+    padding: 3vw;
+    display: flex;
+    flex-flow: row nowrap;
+    border-radius: 15px;
+}
+.section .box .swiper .swiper-slide > div {
+    width: 50%;
+}
+.section .box .swiper .swiper-slide .slide_img {
+    margin-top: 7vw;
+}
+.section .box .swiper .swiper-slide .slide_des {
+    padding: 2vw;
+}
+.section .box .swiper .swiper-slide .slide_des .number {
+    text-align: right;
+    color: #999;
+}
+.section .box .swiper .swiper-slide .slide_des .number p {
+    font-size: 1vw;
+}
+
+.section .box .swiper .swiper-slide .slide_des .number p b {
+    font-size: 2vw;
+    color: #ffb370;
+}
+.section .box .swiper .swiper-slide .slide_des p span {
+    color: #ffb370;
+}
+.section .box .swiper .swiper-slide .slide_des .slide_btn {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-top: 1vw;
+}
+.section .box .swiper .swiper-slide .slide_des .slide_btn a {
+    border-radius: 20px;
+    border: 1px solid #ffb370;
+    background-color: #ffb370;
+    padding: 0.4vw 1.5vw 0.6vw;
+    color: #fff;
+    font-size: 0.8vw;
+    margin-right: 1vw;
+}
+.section .box .swiper .swiper-slide .slide_des .slide_btn a:hover {
+    background-color: #fff;
+    color: #ffb370;
+}
+/*슬라이드 버튼 (prev,next)*/
+.section .box .swiper .swiper-button-prev,
+.section .box .swiper .swiper-button-next {
+    color: #ffb370;
+}
+/* editorial */
+.section .box .gallery {
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    top: 100vh;
+    transition: all 1s;
+    transition-delay: 0.5s;
+    display: flex;
+    flex-flow:row nowrap;
+}
+.section .box .gallery.active {
+    opacity: 1;
+    top: 0;
+}
+.section .box .gallery .thum_img {
+    width: 32%;
+    margin-top: 2.5vw;
+}
+.section .box .gallery .thum_img ul {
+    display: flex;
+    flex-flow: row wrap;    /*줄바꿈 허용*/
+    justify-content: space-between;
+}
+.section .box .gallery .thum_img ul li {
+    width: 48%;
+}
+.section .box .gallery .big_img {
+    width: 78%;
+    padding-left: 4vw;
+    position: relative;    /*자식객체 li 겹칠 때 기준이 됨*/
+}
+.section .box .gallery .big_img ul li {
+    position: absolute;
+}
+/* contact */
+/* footer */
+footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    font-size: 0.7vw;
+    text-align: right;
+    color: #333;
+    padding: 0.3vw;
+    font-family:'Secular One', sans-serif;
+}
+/* contact */
+.section .box .contact_wrap {
+    border: 1px solid #999;
+    width: 100%;
+    height: 70vh;
+    opacity: 0;
+    transition: all 1s;
+    transition-delay: 0.5s;
+    padding: 4vw;
+    box-sizing: border-box;
+    background-color: rgba(255, 255,255,0.2);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+.section .box .contact_wrap.active {
+    opacity: 1;
+}
+.section .box .contact_wrap .contact_img {
+    width: 40%;
+   
+}
+.section .box .contact_wrap form {
+   width: 50%;
+}
+.section .box .contact_wrap form fieldset {
+    border:none;
+    margin: 0.4vw 0;
+}
+.section .box .contact_wrap form fieldset label {
+    font-size: 1vw;
+}
+.section .box .contact_wrap form fieldset input {
+    width: 22vw;
+    padding: 0.7vw;
+    margin-left: 1vw;
+}
+.section .box .contact_wrap form fieldset textarea {
+    padding: 0.7vw;
+    margin-left: 1vw;
+    width: 22vw;
+}
+.section .box .contact_wrap form button {
+    border: none;
+    background-color: #6adcfa;
+    color: #fff;
+    font-size: 0.7vw;
+    padding: 0.7vw;
+    float: right;
+    margin-right: 2.9vw;
+    cursor: pointer;
+}
